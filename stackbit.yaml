@@ -6,6 +6,7 @@ uploadDir: img
 staticDir: exampleSite/static
 pagesDir: exampleSite/content
 dataDir: exampleSite
+cmsName: contentful
 models:
   config:
     type: data
@@ -39,7 +40,7 @@ models:
         name: params
         label: Params
         description: Site parameters
-        fields: 
+        fields:
           - type: string
             name: brand
             label: Brand Name
@@ -49,12 +50,12 @@ models:
           - type: image
             name: bgimg
             label: Background Image
-  home: 
+  home:
     type: page
     label: Home
     file: _index.md
     singleInstance: true
-    fields: 
+    fields:
       - type: string
         name: title
         label: Title
@@ -69,7 +70,7 @@ models:
     label: About
     file: about/index.md
     singleInstance: true
-    fields: 
+    fields:
       - type: string
         name: title
         label: Title
@@ -89,7 +90,8 @@ models:
     type: page
     label: Blog Post
     folder: post
-    match: "**/index.md"
+    match:
+      - '**/index.md'
     fields:
       - type: string
         name: title
@@ -133,7 +135,7 @@ models:
         label: Resources
         items:
           type: object
-          fields: 
+          fields:
             - type: string
               name: name
               label: Name
@@ -147,17 +149,3 @@ models:
                 - type: string
                   name: description
                   label: Description
-
-
-
-
-
-
-
-
-
-
-
-
-
-
